@@ -1,0 +1,102 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+    --bg:#FF7940;
+    --card-bg:#fff;
+    --hor-line-bg:#fff;
+}
+.container{
+    background:;
+    background:var(--bg);
+    min-height:100vh;
+    width:100vw;
+    position:relative;
+    padding:20px 0;
+    z-index:2;
+    background-attachment:;
+}
+.horLine{
+    background:#000;
+    width:6px;
+    height:100%;
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--hor-line-bg);
+    border-radius:50px;
+}
+.row{
+    width:100%;
+    background:transparent;
+    margin-bottom:0px;
+    display:flex;
+    justify-content:flex-start;
+    padding:0 10px;
+    perspective:300px;
+}
+.row:nth-child(2n - 1){
+    justify-content:flex-end;
+}
+.row .card{
+    width:43vw;
+    min-height:90px;
+    height:100%;
+    background:var(--card-bg);
+    position:relative;
+    border-radius:5px;
+    padding:5px 3px;
+    text-align:center;
+    box-shadow:0 10px 10px 0 #0007;
+    transition:400ms;
+}
+.row .card::after{
+    content:'';
+    height:10vw;
+    width:10vw;
+    background:#fff;
+    position:absolute;
+    top:20px;
+    right:-8px;
+    transform:rotateZ(45deg);
+    display:inline-block;
+    z-index:-1;
+}
+.row:nth-child(2n - 1) .card:after{
+    left:-8px;
+}
+/*MAIN PART DONE 👀, Now Time to style card*/
+
+.row .card:hover{
+    width:90%;
+    margin:20px;
+    transform:rotateY(-360deg);
+    box-shadow:0 20px 30px 0 #000;
+    background:;
+    padding:30px;
+}
+.row:nth-child(2n) .card:hover{
+    transform:rotateY(360deg);
+}
+.row .card:hover:after{
+    display:none;
+}
+.card .heading{
+    font-size:1em;
+    color:#000;
+    margin-bottom:2%;
+    border-bottom:2px solid #555;
+}
+.card .description{
+    color:#555;
+    border-bottom:2px solid #555;
+    margin-bottom:2%;
+}
+.card .date{
+    float:right;
+    background:#06d;
+    border-radius:4px;
+    padding:1% 3%;
+    color:#000;
+    font-weight:400;
+    text-transform:uppercase;
+}
