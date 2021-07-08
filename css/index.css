@@ -32,7 +32,6 @@
     display:flex;
     justify-content:flex-start;
     padding:0 10px;
-    perspective:300px;
 }
 .row:nth-child(2n - 1){
     justify-content:flex-end;
